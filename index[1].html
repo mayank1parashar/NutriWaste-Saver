@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriWaste Saver - Smart Food Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">🥬</span>
+                    <h1>NutriWaste Saver</h1>
+                </div>
+                <nav class="nav">
+                    <button class="nav-btn active" data-page="dashboard">Dashboard</button>
+                    <button class="nav-btn" data-page="inventory">Inventory</button>
+                    <button class="nav-btn" data-page="meal-plan">Meal Plan</button>
+                    <button class="nav-btn" data-page="recipes">Recipes</button>
+                </nav>
+                <div class="user-profile">
+                    <div class="notification-bell">
+                        <span class="bell-icon">🔔</span>
+                        <span class="notification-count">3</span>
+                    </div>
+                    <div class="avatar">👤</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Page -->
+        <main class="page active" id="dashboard">
+            <div class="container">
+                <div class="dashboard-grid">
+                    <!-- Food Inventory Summary -->
+                    <section class="card inventory-summary">
+                        <h2>Food Inventory Overview</h2>
+                        <div class="inventory-stats">
+                            <div class="stat-item fresh">
+                                <div class="stat-circle green"></div>
+                                <div class="stat-info">
+                                    <span class="stat-number">8</span>
+                                    <span class="stat-label">Fresh Items</span>
+                                </div>
+                            </div>
+                            <div class="stat-item expiring-soon">
+                                <div class="stat-circle yellow"></div>
+                                <div class="stat-info">
+                                    <span class="stat-number">3</span>
+                                    <span class="stat-label">Use Soon</span>
+                                </div>
+                            </div>
+                            <div class="stat-item expiring">
+                                <div class="stat-circle red"></div>
+                                <div class="stat-info">
+                                    <span class="stat-number">1</span>
+                                    <span class="stat-label">Expiring</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="freshness-bar">
+                            <div class="bar-segment green" style="width: 67%"></div>
+                            <div class="bar-segment yellow" style="width: 25%"></div>
+                            <div class="bar-segment red" style="width: 8%"></div>
+                        </div>
+                    </section>
+
+                    <!-- Today's Meal Plan -->
+                    <section class="card meal-preview">
+                        <h2>Today's Meal Plan</h2>
+                        <div class="meal-cards">
+                            <div class="meal-card">
+                                <div class="meal-icon">🍌</div>
+                                <div class="meal-info">
+                                    <h3>Breakfast</h3>
+                                    <p>Banana Smoothie Bowl</p>
+                                    <span class="meal-time">8:00 AM</span>
+                                </div>
+                            </div>
+                            <div class="meal-card">
+                                <div class="meal-icon">🥬</div>
+                                <div class="meal-info">
+                                    <h3>Lunch</h3>
+                                    <p>Spinach Chicken Stir Fry</p>
+                                    <span class="meal-time">1:00 PM</span>
+                                </div>
+                            </div>
+                            <div class="meal-card">
+                                <div class="meal-icon">🍝</div>
+                                <div class="meal-info">
+                                    <h3>Dinner</h3>
+                                    <p>Creamy Pasta</p>
+                                    <span class="meal-time">7:00 PM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Quick Actions -->
+                    <section class="card quick-actions">
+                        <h2>Quick Actions</h2>
+                        <div class="action-buttons">
+                            <button class="btn btn--primary action-btn" id="add-groceries">
+                                <span class="btn-icon">🛒</span>
+                                Add Groceries
+                            </button>
+                            <button class="btn btn--secondary action-btn" id="plan-meals">
+                                <span class="btn-icon">📅</span>
+                                Plan Meals
+                            </button>
+                            <button class="btn btn--outline action-btn" id="find-recipes">
+                                <span class="btn-icon">👨‍🍳</span>
+                                Find Recipes
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Waste Impact -->
+                    <section class="card waste-impact">
+                        <h2>This Week's Impact</h2>
+                        <div class="impact-stats">
+                            <div class="impact-item">
+                                <span class="impact-icon">♻️</span>
+                                <div>
+                                    <span class="impact-number">2.3kg</span>
+                                    <span class="impact-label">Waste Saved</span>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-icon">💰</span>
+                                <div>
+                                    <span class="impact-number">$18.50</span>
+                                    <span class="impact-label">Money Saved</span>
+                                </div>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-icon">🌱</span>
+                                <div>
+                                    <span class="impact-number">4.2kg</span>
+                                    <span class="impact-label">CO₂ Reduced</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Inventory Page -->
+        <main class="page" id="inventory">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Food Inventory</h1>
+                    <button class="btn btn--primary" id="add-item-btn">+ Add Item</button>
+                </div>
+                <div class="inventory-filters">
+                    <select class="form-control filter-select" id="category-filter">
+                        <option value="">All Categories</option>
+                        <option value="Fruits">Fruits</option>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Dairy">Dairy</option>
+                        <option value="Meat">Meat</option>
+                        <option value="Grains">Grains</option>
+                        <option value="Pantry">Pantry</option>
+                    </select>
+                    <select class="form-control filter-select" id="freshness-filter">
+                        <option value="">All Freshness</option>
+                        <option value="green">Fresh</option>
+                        <option value="yellow">Use Soon</option>
+                        <option value="red">Expiring</option>
+                    </select>
+                </div>
+                <div class="inventory-grid" id="inventory-grid">
+                    <!-- Food items will be populated by JavaScript -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Meal Plan Page -->
+        <main class="page" id="meal-plan">
+            <div class="container">
+                <div class="meal-plan-layout">
+                    <div class="calendar-container">
+                        <h1>Weekly Meal Plan</h1>
+                        <div class="calendar-grid" id="calendar-grid">
+                            <!-- Calendar will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="sidebar">
+                        <div class="recipe-library">
+                            <h3>Recipe Library</h3>
+                            <input type="text" class="form-control" placeholder="Search recipes..." id="recipe-search">
+                            <div class="recipe-list" id="recipe-list">
+                                <!-- Recipes will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        <div class="nutrition-summary">
+                            <h3>Daily Nutrition</h3>
+                            <div class="nutrition-item">
+                                <span>Calories: 1850</span>
+                                <div class="progress-bar"><div class="progress" style="width: 75%"></div></div>
+                            </div>
+                            <div class="nutrition-item">
+                                <span>Protein: 85g</span>
+                                <div class="progress-bar"><div class="progress" style="width: 85%"></div></div>
+                            </div>
+                            <div class="nutrition-item">
+                                <span>Carbs: 220g</span>
+                                <div class="progress-bar"><div class="progress" style="width: 70%"></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Recipes Page -->
+        <main class="page" id="recipes">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Recipe Suggestions</h1>
+                    <div class="recipe-filters">
+                        <select class="form-control" id="difficulty-filter">
+                            <option value="">All Difficulties</option>
+                            <option value="Easy">Easy</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Hard">Hard</option>
+                        </select>
+                        <button class="btn btn--outline" id="leftover-filter">Leftover Heroes Only</button>
+                    </div>
+                </div>
+                <div class="recipes-grid" id="recipes-grid">
+                    <!-- Recipe cards will be populated by JavaScript -->
+                </div>
+            </div>
+        </main>
+
+        <!-- Notifications Panel -->
+        <div class="notifications-panel hidden" id="notifications-panel">
+            <div class="panel-header">
+                <h3>Notifications</h3>
+                <button class="close-btn" id="close-notifications">×</button>
+            </div>
+            <div class="notifications-list" id="notifications-list">
+                <!-- Notifications will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Add Item Modal -->
+        <div class="modal hidden" id="add-item-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Add Food Item</h3>
+                    <button class="close-btn" id="close-modal">×</button>
+                </div>
+                <form class="modal-body" id="add-item-form">
+                    <div class="form-group">
+                        <label class="form-label">Food Name</label>
+                        <input type="text" class="form-control" id="item-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Category</label>
+                        <select class="form-control" id="item-category" required>
+                            <option value="">Select Category</option>
+                            <option value="Fruits">Fruits</option>
+                            <option value="Vegetables">Vegetables</option>
+                            <option value="Dairy">Dairy</option>
+                            <option value="Meat">Meat</option>
+                            <option value="Grains">Grains</option>
+                            <option value="Pantry">Pantry</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Quantity</label>
+                        <input type="text" class="form-control" id="item-quantity" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Expiry Date</label>
+                        <input type="date" class="form-control" id="item-expiry" required>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn--outline" id="cancel-add">Cancel</button>
+                        <button type="submit" class="btn btn--primary">Add Item</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
