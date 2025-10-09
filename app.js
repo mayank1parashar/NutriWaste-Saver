@@ -5,7 +5,7 @@ const appData = {
     {"name": "Bananas", "category": "Fruits", "quantity": "6 pieces", "expiryDays": 2, "freshness": "yellow"},
     {"name": "Spinach", "category": "Vegetables", "quantity": "1 bag", "expiryDays": 1, "freshness": "red"},
     {"name": "Chicken Breast", "category": "Meat", "quantity": "500g", "expiryDays": 4, "freshness": "green"},
-    {"name": "Milk", "category": "Dairy", "quantity": "1L", "expiryDays": 3, "freshness": "yellow"},
+    {"name": "Milk", "category": "Dairy", "quantity": "1L", "expiryDays": 2, "freshness": "yellow"},
     {"name": "Apples", "category": "Fruits", "quantity": "8 pieces", "expiryDays": 7, "freshness": "green"},
     {"name": "Carrots", "category": "Vegetables", "quantity": "1kg", "expiryDays": 5, "freshness": "green"},
     {"name": "Yogurt", "category": "Dairy", "quantity": "500g", "expiryDays": 4, "freshness": "green"},
