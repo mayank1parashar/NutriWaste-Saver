@@ -17,6 +17,7 @@ const appData = {
     {"name": "Creamy Pasta", "prepTime": "25 min", "difficulty": "Easy", "ingredients": ["Pasta", "Milk", "Cheese"], "isLeftoverHero": false, "icon": "🍝"},
     {"name": "Apple Cinnamon Oatmeal", "prepTime": "15 min", "difficulty": "Easy", "ingredients": ["Apples", "Oats", "Cinnamon"], "isLeftoverHero": true, "icon": "🍎"},
     {"name": "Carrot Soup", "prepTime": "30 min", "difficulty": "Medium", "ingredients": ["Carrots", "Onion", "Vegetable Stock"], "isLeftoverHero": false, "icon": "🥕"}
+    {"name": "Upma" , "prepTime": "15 min", "difficulty": "Medium" , "ingredients": ["Suji" , "Salt", " Desi Butter" , "Onion" , "peanut"], "isLeftoverHero": false, "icon": " 🍲 "}
   ],
   notifications: [
     {"type": "expiry", "message": "Spinach expires tomorrow - use in Spinach Chicken Stir Fry!", "urgency": "high"},
