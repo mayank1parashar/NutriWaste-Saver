@@ -2,7 +2,7 @@
 const appData = {
   foodCategories: ["Fruits", "Vegetables", "Dairy", "Meat", "Grains", "Pantry"],
   sampleFoodItems: [
-    {"name": "BAnanas", "category": "Fruits", "quantity": "6 pieces", "expiryDays": 2, "freshness": "yellow"},
+    {"name": "Bananas", "category": "Fruits", "quantity": "6 pieces", "expiryDays": 2, "freshness": "yellow"},
     {"name": "Spinach", "category": "Vegetables", "quantity": "1 bag", "expiryDays": 1, "freshness": "red"},
     {"name": "Chicken Breast", "category": "Meat", "quantity": "500g", "expiryDays": 4, "freshness": "green"},
     {"name": "Milk", "category": "Dairy", "quantity": "1L", "expiryDays": 3, "freshness": "yellow"},
