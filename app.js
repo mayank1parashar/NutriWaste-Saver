@@ -43,7 +43,7 @@ const foodIcons = {
   'Bananas': '🍌',
   'Spinach': '🥬',
   'Chicken Breast': '🍗',
-  
+  'Mango': '🥭',
   'Milk': '🥛',
   'Apples': '🍎',
   'Carrots': '🥕',
